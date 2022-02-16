@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.11.14)  16 FEB 2022 16:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.11.14)  16 FEB 2022 16:42
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -486,6 +486,9 @@ nput line 47.
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <../figu
 res//incarc_length_by_racegender.png>] (../tables/regress_incarc_length_by_race
 gender.tex) [2] (./paper.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package rerunfilecheck Info: File `paper.out' has not changed.
 (rerunfilecheck)             Checksum: 8A8C393536A78A1A23EEE4A820C93AAD;83.
  ) 
@@ -506,7 +509,7 @@ local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/loc
 al/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/loca
 l/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/
 texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on paper.pdf (2 pages, 174210 bytes).
+Output written on paper.pdf (2 pages, 174352 bytes).
 PDF statistics:
  66 PDF objects out of 1000 (max. 8388607)
  50 compressed objects within 1 object stream
