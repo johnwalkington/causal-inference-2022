@@ -3,7 +3,7 @@
 # vignette("colwise")
 # vignette("rowwise")
 
-read_csv(here("data/NLSY97_raw.csv")) %>%
+read_csv(here("data/NLSY_97_new.csv")) %>%
   
   # refused responses or already incarcerated --> NA
   # starts_with("E") are the columns that hold number of arrests per month of 2002
@@ -18,7 +18,8 @@ read_csv(here("data/NLSY97_raw.csv")) %>%
   
   # sum across the months using rowwise
   rowwise() %>%
-  mutate(total_arrests = sum(c_across(starts_with("E")), na.rm = TRUE)) %>%
+  mutate(incarc_length = sum(c_across(starts_with("E")), na.rm = TRUE)) %>%
+  filter(incarc_length > 0) %>%
   ungroup() %>%
 
   # recode the gender variable
@@ -33,7 +34,8 @@ read_csv(here("data/NLSY97_raw.csv")) %>%
   )) %>%
   
   # finally, select the variables that will be used in the analysis
-  select(race, gender, total_arrests) %>%
+  select(race, gender, incarc_length) %>%
   
   # write to a csv
-  write_csv(here("data/NLSY97_clean.csv"))
+  write_csv(here("data/NLSY97_clean_new.csv"))
+  

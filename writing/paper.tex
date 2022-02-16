@@ -31,52 +31,29 @@
 }
 
 % set the author, title, and date of the document. \maketitle adds it to the document.
-\author{Nathan Hattersley}
-\title{My Paper on NLSY97 Data}
-\date{Sping 2022}
+\author{John Walkington}
+\title{Hidden Curriculum Assignment: NLSY97 Data}
+\date{Spring 2022}
 
 \begin{document}
 \maketitle
 
-\section{The First Section}
+\section{Analysis}
 
-This is where I talk about basic \LaTeX. Using the \texttt{parskip} package, I can create a new paragraph by using line breaks, which I will do now.
-
-I can also make cool equations inline by using parentheses{\textemdash}like this: \(x + 2\){\textemdash}or by using single dollar signs{\textemdash}like this: $x+2$. Parentheses are preferred because the left and right delimiter are distinct.
-
-I can make cool equations in a block style by using the \texttt{equation} environment like so:
-\begin{equation*}
-    y = x\beta + \varepsilon
-\end{equation*}
-or by using double dollar signs:
-$$
-    y = x\beta + \varepsilon
-$$
-
-Again, the \texttt{equation} environment is preferred because the begin and end delimiters are different.
-
-I can also add a bibliography, but this is beyond the scope of our discussion right now. Overleaf has plenty of resources for this on their \href{https://www.overleaf.com/learn}{website}. Another good place to look for LaTeX help is the \href{https://en.wikibooks.org/wiki/LaTeX}{WikiBook} on it.
-
-\newpage
-
-\section{The Second Section}
-
-Wherein we do tables and graphs. To include the graph we made in ggplot, we create the \texttt{figure} environment. The `H' option tells LaTeX to `hold' the position of the figure instead of positioning it somewhere else. I use the \texttt{caption} command to add a caption{\textemdash}although I also put a title on the plot in ggplot so you would typically choose one or the other. I use the \texttt{label} command after the caption to add a label. Then in my paper I can use the \texttt{ref} command and LaTeX knows I am referring to Figure \ref{fig:graph}.
-
+On average, black men spent the most time in jail in 2002.  Perhaps this could be because black men on average are sentenced more harshly.  It could also be that black men typically commit crimes that carry more severe sentences.  There is a significant increase in average incarceration length for all men, and a significant decrease in average incarceration length for whites.  There is not analysis to happen to determine if this is bias or a latent correlation with something unobserved.
 
 \begin{figure}[H]
     \begin{center}
-        \includegraphics[width=.85\textwidth]{arrests_by_racegender}
+        \includegraphics[width=.85\textwidth]{incarc_length_by_racegender}
     \end{center}
-    \caption{Mean Number of Arrests in 2002 by Race and Gender (this is the LaTeX caption, not the ggplot title)}
+    \caption{Mean Number of Arrests in 2002 by Race and Gender}
     \label{fig:graph}
 \end{figure}
 
 
-Tables are somewhat easier, since \texttt{kableExtra} and \texttt{stargazer} generate LaTeX code that is ready to just ``copy-paste'' into our document. The \texttt{label} argument in the R code is the label that the table will have in the tex output, if you want to \texttt{ref} it.
 
-\input{../tables/arrests_by_racegender.tex}
+\input{../tables/incarc_length_by_racegender.tex}
 
-\input{../tables/regress_arrests_by_racegender.tex}
+\input{../tables/regress_incarc_length_by_racegender.tex}
 
 \end{document}
